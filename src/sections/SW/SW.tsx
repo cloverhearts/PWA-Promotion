@@ -22,14 +22,14 @@ function SW() {
       console.log('service worker ', url)
       setInterval(() => {
         try {
-          new Notification('[OPENAPI 알리미] 레벨업!', { image: 'https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5125188760694163101'})
+          new Notification('[OPENAPI 알리미] 레벨업!', { image: 'https://upload3.inven.co.kr/upload/2022/01/02/bbs/i15275646915.jpg', icon: 'https://upload3.inven.co.kr/upload/2022/01/02/bbs/i15275646915.jpg'})
         } catch (e) {
           console.log(e)
           if (reg) {
-            reg.showNotification('[OPENAPI 알리미] 레벨업!', {image: 'https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5125188760694163101'})
+            reg.showNotification('[OPENAPI 알리미] 레벨업!', {image: 'https://upload3.inven.co.kr/upload/2022/01/02/bbs/i15275646915.jpg', icon: 'https://upload3.inven.co.kr/upload/2022/01/02/bbs/i15275646915.jpg'})
           }
         }
-      }, 3000)
+      }, 5000)
     }
   });
 
