@@ -21,8 +21,13 @@ function SW() {
     onRegisteredSW: (url, reg) => {
       console.log('service worker ', url)
       setInterval(() => {
-        if (reg) {
-          reg.showNotification('[OPENAPI 알리미] 레벨업!', { image: 'https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5125188760694163101'})
+        try {
+          new Notification('[OPENAPI 알리미] 레벨업!', { image: 'https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5125188760694163101'})
+        } catch (e) {
+          console.log(e)
+          if (reg) {
+            reg.showNotification('[OPENAPI 알리미] 레벨업!', {image: 'https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5125188760694163101'})
+          }
         }
       })
     }
@@ -41,11 +46,7 @@ function SW() {
     Notification.requestPermission(result => {
 
       if (result === 'granted') {
-        try {
-          new Notification('[OPENAPI 알리미] 레벨업!', { image: 'https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5125188760694163101'})
-        } catch (e) {
-          console.log(e)
-        }
+
       } else {
         notificationsActions.push({
           options: {
