@@ -19,15 +19,9 @@ function Welcome() {
 
   return (
     <>
-      <Meta title="Welcome" />
+      <Meta title="OPEN API Test app" />
       <FullSizeCenteredFlexBox flexDirection={isPortrait ? 'column' : 'row'}>
-        <Image alt="react-router" src={rrLogo} />
-        <Image alt="vite" src={viteLogo} />
-        <Image alt="typescript" src={tsLogo} />
-        <Image alt="react" src={reactLogo} sx={{ width, height }} />
-        <Image alt="mui" src={muiLogo} />
-        <Image alt="recoil" src={recoilLogo} />
-        <Image alt="pwa" src={pwaLogo} />
+        <img src={`/dashboard.png`} style={{ height: '100%'}} />
       </FullSizeCenteredFlexBox>
     </>
   );
