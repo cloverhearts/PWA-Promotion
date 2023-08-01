@@ -21,7 +21,7 @@ function Welcome() {
     <>
       <Meta title="OPEN API Test app" />
       <FullSizeCenteredFlexBox flexDirection={isPortrait ? 'column' : 'row'}>
-        <img src={`/dashboard.png`} style={{ height: '100%'}} />
+        <img src={`/PWA-Promotion/dashboard.png`} style={{ height: '100%'}} />
       </FullSizeCenteredFlexBox>
     </>
   );
