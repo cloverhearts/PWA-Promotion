@@ -43,23 +43,28 @@ function SW() {
   }, [setOfflineReady, setNeedRefresh, notificationsActions]);
 
   useEffect(() => {
-    Notification.requestPermission(result => {
+    try {
+      Notification.requestPermission(result => {
 
-      if (result === 'granted') {
+        if (result === 'granted') {
 
-      } else {
-        notificationsActions.push({
-          options: {
-            anchorOrigin: {
-              vertical: 'top',
-              horizontal: 'center',
+        } else {
+          notificationsActions.push({
+            options: {
+              anchorOrigin: {
+                vertical: 'top',
+                horizontal: 'center',
+              },
+              autoHideDuration: 4500,
+              content: <Alert severity="error">알람 설정이 차단되어있습니다. 허용해주세요</Alert>,
             },
-            autoHideDuration: 4500,
-            content: <Alert severity="error">알람 설정이 차단되어있습니다. 허용해주세요</Alert>,
-          },
-        });
-      }
-    })
+          });
+        }
+      })
+    } catch (e) {
+      console.log('error', e)
+    }
+
   }, []);
 
 
