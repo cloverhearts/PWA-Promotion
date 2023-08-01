@@ -29,7 +29,7 @@ function SW() {
             reg.showNotification('[OPENAPI 알리미] 레벨업!', {image: 'https://upload3.inven.co.kr/upload/2022/01/02/bbs/i15275646915.jpg', icon: 'https://upload3.inven.co.kr/upload/2022/01/02/bbs/i15275646915.jpg'})
           }
         }
-      }, 5000)
+      }, 8000)
     }
   });
 
