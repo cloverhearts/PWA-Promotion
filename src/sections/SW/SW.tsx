@@ -29,7 +29,7 @@ function SW() {
             reg.showNotification('[OPENAPI 알리미] 레벨업!', {image: 'https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5125188760694163101'})
           }
         }
-      })
+      }, 3000)
     }
   });
 
